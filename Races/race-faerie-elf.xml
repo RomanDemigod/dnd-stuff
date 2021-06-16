@@ -52,7 +52,7 @@
 			<stat name="darkvision:range" value="60" bonus="base" />
             <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FEY_ANCESTRY" />
             <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FAIRY_WINGS" />
-			<grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FACTION" />
+			<grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_SUBRACE" />
             <grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<grant type="Language" id="ID_LANGUAGE_ELVISH" />
             <grant type="Language" id="ID_LANGUAGE_SYLVAN" />
