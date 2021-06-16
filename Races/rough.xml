@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Faerie Elf</name>
+		<description>5e homebrew</description>
+		<author url="https://www.dandwiki.com/wiki/Faerie_Elf_(5e_Race)">D&amp;D Wiki</author>
+        <update version="1.0">
+            <file name="race-faerie-elf.xml" url="https://raw.githubusercontent.com/community-elements/elements-dndwiki/master/dndwiki/races/race-sprite.xml" />
+        </update>
+	</info>
+
+	 <element name="Faerie Elf" type="Race" source="D&amp;D Wiki" id="ID_WIKI_RACE_FAERIE_ELF">
+        <description>
+            <h4>PHYSICAL DESCRIPTION</h4>
+            <p>Faerie elves are roughly the same height as gnomes but weigh roughly 25 to 60 lbs. Faeries tend to have more vibrant eye colors of shimmering greens, blues, and reds. They have a pair of transparent wings that allow them to fly. Other than that they look like most wood elves.</p>
+            <h4>HISTORY</h4>
+            <p>Although not many people have seen these crossbreeds, the faerie elf is a mixture of a elf and a fey. They tend to keep their societies and culture hidden from public view. Faerie elves are known to have many conflicts within their society, from what little has been observed. They tend to have very different views of other races and cultures. There are two primary groups, or "Factions", the faeries tend to choose from, and both come with their own set of special traits and physical appearances; Chaotic and Tranquil.</p>
+            <h4>SOCIETY</h4>
+            <p>Faerie elves tend to keep to themselves and tend to hide from other outside sources, mainly due to the harsh discrimination and prejudice their ancestors have experienced. They are buried deep within forests and caves and have a strong sense of family. They tend to have a hard time developing new relations with others, especially if they're neither fey, elf, or faerie. The ones who do leave the villages tend to be brave adventurers determined to prove the old ways are over.</p>
+            <h4>FAERIE ELF NAMES</h4>
+            <p>Faerie Elves tend to take their name after elf or fey names. It's recorded that some Faerie's names are of exotic plants</p>
+            
+            <h4>FAERIE ELF TRAITS</h4>
+            <p>Good and Bad Fairies, the playable race.</p>
+            <p>
+                <span class="feature">Ability Score Increase.</span>Your Charisma score increases by 1.<br />
+                <span class="feature">Age.</span>Like the rest of their elven brother's faerie elves typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.<br />
+                <span class="feature">Alignment.</span>The alignment of those of the Tranquil Faction range from lawful good to lawful neutral and those of the Chaotic faction from chaotic neutral to chaotic evil. No faerie elf is ever true neutral.<br />
+                <span class="feature">Size.</span>Unlike most elves Faerie elves range from 3 to over 4 foot tall but have slender builds and weigh very little. Your size is Small.<br />
+                <span class="feature">Speed.</span>Your base walking speed is 20 feet and your flying speed is 30 feet.<br />
+				<span class="feature">Darkvision</span>Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of grey.<br />
+                <span class="feature">Fey Ancestry</span>You have advantage on saving throws against being charmed, and magic can't put you to sleep.<br />
+                <span class="feature">Fairy Wings</span>You have a pair of light, transparent wings that grant you a fly speed of 30-feet allowing you a certain degree of flight. However, these wings can only fly up to a height of 30 feet, any higher and they fail until you are 30 feet above the ground again. You lose your flying speed until you complete a short or long rest if they are directly exposed to water.<br />
+                <span class="feature">Languages.</span>Faerie elves can speak, read and write Common, Elvish, and Sylvan.<br />
+				<span class="feature">Subrace.</span>The subraces of the Faerie Elves are determined by the faction they were born into.<br />
+            </p>
+        </description>
+        <setters>
+            <set name="height" modifier="3d4">3'0"</set>
+            <set name="weight" modifier="2d2">15</set>
+        </setters>
+        <sheet display="false">
+            <description>Faerie elves are roughly the same height as gnomes but weigh roughly 25 to 60 lbs. Faeries tend to have more vibrant eye colors of shimmering greens, blues, and reds. They have a pair of transparent wings that allow them to fly. Other than that they look like most wood elves.</description>
+        </sheet>
+        <rules>
+            <stat name="charisma" value="1" />
+            <select type="Ability Score Improvement" name="Faerie Elf" supports="ID_INTERNAL_ASI_STRENGTH|ID_INTERNAL_ASI_INTELLIGENCE" />
+            <grant type="Size" id="ID_SIZE_SMALL" />
+            <stat name="innate speed" value="20" bonus="base" />
+			<stat name="innate speed::fly" value="30" bonus="base"/>
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+			<stat name="darkvision:range" value="60" bonus="base" />
+            <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FEY_ANCESTRY" />
+            <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FAIRY_WINGS" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_LANGUAGE_ELVISH" />
+            <grant type="Language" id="ID_LANGUAGE_SYLVAN" />
+        </rules>
+    </element>
+	<element name="Faerie Elf Faction" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FACTION">
+        <supports>Faerie Elf</supports>
+        <requirements />
+        <description>
+            <p>The subraces of the Faerie Elves are determined by the faction they were born into.</p>
+        </description>
+        <sheet display="false"/>
+        <rules>
+            <select type="Sub Race" name="FACTION" supports="Faerie Elf Faction" />
+        </rules>
+    </element>
+    <element name="Fey Ancestry" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FEY_ANCESTRY">
+        <description>
+            <p>You have advantage on saving throws against being charmed, and magic can't put you to sleep.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on saving throws against being charmed, and magic can't put you to sleep.</description>
+        </sheet>
+    </element>
+    <element name="Fairy Wings" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FAIRY_WINGS">
+        <description>
+            <p>You have a pair of light, transparent wings that grant you a fly speed of 30-feet allowing you a certain degree of flight. However, these wings can only fly up to a height of 30 feet, any higher and they fail until you are 30 feet above the ground again. You lose your flying speed until you complete a short or long rest if they are directly exposed to water.</p>
+        </description>
+        <sheet>
+            <description>You have a fly speed of 30-feet but cannot fly higher than this. When directly exposed to water you lose the ability to fly until you complete a short or long rest.</description>
+        </sheet>
+    </element>
+	
+	<!-- Tranquil Faction -->
+	<element name="Tranquil Faction" type="Sub Race" source="D&amp;D Wiki" id="ID_WIKI_FAERIE_ELF_SUBRACE_TRANQUIL">
+        <supports>Faerie Elf Subrace</supports>
+        <requirements />
+        <description>
+            <p>The Tranquil Faction tends to view other races equally to their own and are more keen on having open relationships with others. These Faeries focus more on nature magic, similar to a druid.</p>
+            <p class="indent"><b><i>Ability Score Increase. </i></b>Your Wisdom score increases by 2.</p>
+            <p class="indent"><b><i>Fairy Light. </i></b>As a bonus action, you can emit a field of light around you shedding bright light in a 10-foot-radius and dim light in an addition 10-foot-radius. This light lasts for 1 minute before dissipating. You must complete a short or long rest before you can use it again.</p>
+            <p class="indent"><b><i>Tranquil Magic. </i></b>The typical tranquil faerie focuses more on their mind rather than their strength. You know one cantrip of your choice from the cleric spell list. Wisdom is your spellcasting ability for it.</p>
+        </description>
+        <sheet display="false"/>
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement (Tranquil Faction)" supports="ID_INTERNAL_ASI_WISDOM" />
+            <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_FAIRY_LIGHT" />
+            <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_TRANQUIL_MAGIC" />
+        </rules>
+    </element>
+	<element name="Fairy Light" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_FAIRY_LIGHT">
+        <description>
+            <p>As a bonus action, you can emit a field of light around you shedding bright light in a 10-foot-radius and dim light in an addition 10-foot-radius. This light lasts for 1 minute before dissipating. You must complete a short or long rest before you can use it again</p>
+        </description>
+    </element>
+	<element name="Tranquil Magic" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_TRANQUIL_MAGIC">
+        <description>
+            <p>You know one cantrip of your choice from the cleric spell list. Wisdom is your spellcasting ability for it.</p>
+        </description>
+        <sheet>
+            <description>You know one cantrip of your choice from the cleric spell list.</description>
+        </sheet>
+        <rules>
+        <select type="cantrip" supports="Cleric,0"/>
+        </rules>
+    </element>
+	
+	<!-- Chaotic Faction -->
+	<element name="Chaotic Faction" type="Sub Race" source="D&amp;D Wiki" id="ID_WIKI_FAERIE_ELF_SUBRACE_CHAOTIC">
+        <supports>Faerie Elf Subrace</supports>
+        <requirements />
+        <description>
+            <p>The Chaotic Faction's views of other races tend to be more negative. These faeries are violent-minded and more focused on their brute strength rather than magic.</p>
+            <p class="indent"><b><i>Ability Score Increase. </i></b>Your Dexterity score increases by 2.</p>
+            <p class="indent"><b><i>Fairy Darkness. </i></b>As a bonus action, you can emit a field of darkness around you, heavily obscuring the area in a 10-foot-radius and lightly obscuring the area for an addition 10-foot-radius. This darkness lasts for 1 minute before dissipating. You must complete a short or long rest before you can use it again.</p>
+            <p class="indent"><b><i>Chaotic Blades. </i></b>You have proficiency with the longsword, shortsword, shortbow, and longbow.</p>
+        </description>
+        <sheet display="false"/>
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement (Chaotic Faction)" supports="ID_INTERNAL_ASI_DEXTERITY" />
+            <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_FAIRY_DARKNESS" />
+            <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_CHAOTIC_BLADES" />
+        </rules>
+    </element>
+	<element name="Fairy Darkness" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_FAIRY_DARKNESS">
+        <description>
+            <p>As a bonus action, you can emit a field of darkness around you, heavily obscuring the area in a 10-foot-radius and lightly obscuring the area for an addition 10-foot-radius. This darkness lasts for 1 minute before dissipating. You must complete a short or long rest before you can use it again.</p>
+        </description>
+    </element>
+	<element name="Chaotic Blades" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_CHAOTIC_BLADES">
+        <description>
+            <p>You have proficiency with the longsword, shortsword, shortbow, and longbow.</p>
+        </description>
+        <sheet display="false">
+            <description>You have proficiency with the longsword, shortsword, shortbow, and longbow.</description>
+        </sheet>
+        <rules>
+        <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LONGSWORD" />
+		<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTSWORD" />
+		<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTBOW" />
+		<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LONGBOW" />
+        </rules>
+    </element>
+</elements>
