@@ -44,7 +44,6 @@
         </sheet>
         <rules>
             <stat name="charisma" value="1" />
-            <select type="Ability Score Improvement" name="Faerie Elf" supports="ID_INTERNAL_ASI_CHARISMA" />
             <grant type="Size" id="ID_SIZE_SMALL" />
             <stat name="innate speed" value="20" bonus="base" />
 			<stat name="innate speed::fly" value="30" bonus="base"/>
@@ -95,7 +94,7 @@
         </description>
         <sheet display="false"/>
         <rules>
-            <select type="Ability Score Improvement" name="Ability Score Improvement (Tranquil Faction)" supports="ID_INTERNAL_ASI_WISDOM" />
+            <stat name="wisdom" value="2" />
             <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_FAIRY_LIGHT" />
             <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_TRANQUIL_MAGIC" />
         </rules>
@@ -129,7 +128,7 @@
         </description>
         <sheet display="false"/>
         <rules>
-            <select type="Ability Score Improvement" name="Ability Score Improvement (Chaotic Faction)" supports="ID_INTERNAL_ASI_DEXTERITY" />
+            <stat name="wisdom" value="3" />
             <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_FAIRY_DARKNESS" />
             <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE__ELF_CHAOTIC_BLADES" />
         </rules>
