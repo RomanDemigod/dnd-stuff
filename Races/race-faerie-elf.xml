@@ -87,7 +87,7 @@
 	
 	<!-- Tranquil Faction -->
 	<element name="Tranquil Faction" type="Sub Race" source="D&amp;D Wiki" id="ID_WIKI_FAERIE_ELF_SUBRACE_TRANQUIL">
-        <supports>Faerie Elf Subrace</supports>
+        <supports>Faerie Elf</supports>
         <requirements />
         <description>
             <p>The Tranquil Faction tends to view other races equally to their own and are more keen on having open relationships with others. These Faeries focus more on nature magic, similar to a druid.</p>
@@ -121,7 +121,7 @@
 	
 	<!-- Chaotic Faction -->
 	<element name="Chaotic Faction" type="Sub Race" source="D&amp;D Wiki" id="ID_WIKI_FAERIE_ELF_SUBRACE_CHAOTIC">
-        <supports>Faerie Elf Subrace</supports>
+        <supports>Faerie Elf</supports>
         <requirements />
         <description>
             <p>The Chaotic Faction's views of other races tend to be more negative. These faeries are violent-minded and more focused on their brute strength rather than magic.</p>
