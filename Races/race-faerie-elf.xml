@@ -37,7 +37,7 @@
         </description>
         <setters>
             <set name="height" modifier="3d4">3'0"</set>
-            <set name="weight" modifier="2d2">15</set>
+            <set name="weight" modifier="2d2">15 lb.</set>
         </setters>
         <sheet display="false">
             <description>Faerie elves are roughly the same height as gnomes but weigh roughly 25 to 60 lbs. Faeries tend to have more vibrant eye colors of shimmering greens, blues, and reds. They have a pair of transparent wings that allow them to fly. Other than that they look like most wood elves.</description>
@@ -58,8 +58,7 @@
             <grant type="Language" id="ID_LANGUAGE_SYLVAN" />
         </rules>
     </element>
-	<element name="Faerie Elf Faction" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FACTION">
-        <supports>Faerie Elf</supports>
+	<element name="Faerie Elf Faction" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_SUBRACE">
         <description>
             <p>The subraces of the Faerie Elves are determined by the faction they were born into.</p>
         </description>
@@ -86,9 +85,8 @@
     </element>
 	
 	<!-- Tranquil Faction -->
-	<element name="Tranquil Faction" type="Sub Race" source="D&amp;D Wiki" id="ID_WIKI_FAERIE_ELF_SUBRACE_TRANQUIL">
+	<element name="Tranquil Faction" type="Sub Race" source="D&amp;D Wiki" id="ID_WIKI_FAERIE_ELF_SUB_RACE_TRANQUIL">
         <supports>Faerie Elf</supports>
-        <requirements />
         <description>
             <p>The Tranquil Faction tends to view other races equally to their own and are more keen on having open relationships with others. These Faeries focus more on nature magic, similar to a druid.</p>
             <p class="indent"><b><i>Ability Score Increase. </i></b>Your Wisdom score increases by 2.</p>
@@ -120,7 +118,7 @@
     </element>
 	
 	<!-- Chaotic Faction -->
-	<element name="Chaotic Faction" type="Sub Race" source="D&amp;D Wiki" id="ID_WIKI_FAERIE_ELF_SUBRACE_CHAOTIC">
+	<element name="Chaotic Faction" type="Sub Race" source="D&amp;D Wiki" id="ID_WIKI_FAERIE_ELF_SUB_RACE_CHAOTIC">
         <supports>Faerie Elf</supports>
         <requirements />
         <description>
