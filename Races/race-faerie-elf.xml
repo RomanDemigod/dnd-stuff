@@ -52,6 +52,7 @@
 			<stat name="darkvision:range" value="60" bonus="base" />
             <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FEY_ANCESTRY" />
             <grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FAIRY_WINGS" />
+			<grant type="Racial Trait" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FACTION" />
             <grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<grant type="Language" id="ID_LANGUAGE_ELVISH" />
             <grant type="Language" id="ID_LANGUAGE_SYLVAN" />
@@ -59,13 +60,12 @@
     </element>
 	<element name="Faerie Elf Faction" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FACTION">
         <supports>Faerie Elf</supports>
-        <requirements />
         <description>
             <p>The subraces of the Faerie Elves are determined by the faction they were born into.</p>
         </description>
         <sheet display="false"/>
         <rules>
-            <select type="Sub Race" name="FACTION" supports="Faerie Elf Faction" />
+            <select type="Sub Race" name="Faerie Elf Faction" supports="Faerie Elf" />
         </rules>
     </element>
     <element name="Fey Ancestry" type="Racial Trait" source="D&amp;D Wiki" id="ID_WIKI_RACIAL_TRAIT_FAERIE_ELF_FEY_ANCESTRY">
